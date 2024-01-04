@@ -1,19 +1,19 @@
 import type { Config } from 'tailwindcss'
-let srcDir = './';
+let srcDir = './'
 
 export default <Partial<Config>>{
     darkMode: 'class',
     content: [
-    `${srcDir}/components/**/*.{vue,js,ts}`,
-    `${srcDir}/layouts/**/*.vue`,
-    `${srcDir}/pages/**/*.vue`,
-    `${srcDir}/composables/**/*.{js,ts}`,
-    `${srcDir}/plugins/**/*.{js,ts}`,
-    `${srcDir}/utils/**/*.{js,ts}`,
-    `${srcDir}/App.{js,ts,vue}`,
-    `${srcDir}/app.{js,ts,vue}`,
-    `${srcDir}/Error.{js,ts,vue}`,
-    `${srcDir}/error.{js,ts,vue}`,
-    `${srcDir}/app.config.{js,ts}`
-  ]
+        `${srcDir}/components/**/*.{vue,js,ts}`,
+        `${srcDir}/layouts/**/*.vue`,
+        `${srcDir}/pages/**/*.vue`,
+        `${srcDir}/composables/**/*.{js,ts}`,
+        `${srcDir}/plugins/**/*.{js,ts}`,
+        `${srcDir}/utils/**/*.{js,ts}`,
+        `${srcDir}/App.{js,ts,vue}`,
+        `${srcDir}/app.{js,ts,vue}`,
+        `${srcDir}/Error.{js,ts,vue}`,
+        `${srcDir}/error.{js,ts,vue}`,
+        `${srcDir}/app.config.{js,ts}`,
+    ],
 }
