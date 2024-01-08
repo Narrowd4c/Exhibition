@@ -4,7 +4,7 @@
             class="relative mb-10 flex items-center gap-4 [&>*]:dark:bg-gray-800"
         >
             <input
-                class="peer border-2 border-green-200 px-2 py-px text-black focus-visible:outline-0"
+                class="peer border-2 border-green-200 px-2 py-px focus-visible:outline-0"
                 type="text"
                 id="search-player"
                 v-model.lazy="playerName"
@@ -20,10 +20,15 @@
         <ul class="-mx-4 flex flex-wrap gap-y-4">
             <li
                 class="w-full px-4 md:w-6/12"
-                v-for="{ id, player, piece } in filterData"
+                v-for="{ id, player, piece, sequence } in filterData"
                 :key="id + player"
             >
-                <CardComp :id="id" :player="player" :piece="piece" />
+                <CardComp
+                    :id="id"
+                    :player="player"
+                    :piece="piece"
+                    :sequence="sequence"
+                />
             </li>
         </ul>
     </main>
@@ -37,7 +42,8 @@ const playerStore = useQuote1Store()
 const playerName = ref<string>('')
 
 interface Quote {
-    id: number
+    id?: number
+    sequence: number
     player: string
     piece: string
 }
