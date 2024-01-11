@@ -1,10 +1,16 @@
 @tailwind base;
 @layer base {
+    @font-face {
+        font-family: 'Comfortaa';
+        src: url(./Comfortaa-VariableFont_wght.ttf) format('truetype');
+    }
     body {
         @apply dark:bg-gray-800;
         @apply dark:text-white;
         @apply tracking-wide;
+        font-family: 'Comfortaa', sans-serif;
     }
+
 }
 @tailwind components;
 @tailwind utilities;

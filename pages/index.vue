@@ -1,22 +1,22 @@
 <template>
     <main class="container py-10">
         <form
-            class="relative mb-10 flex items-center gap-4 [&>*]:dark:bg-gray-800"
+            @submit.prevent class="relative mb-10 flex items-center gap-4 [&>*]:dark:bg-gray-800"
         >
             <input
-                class="peer border-2 border-green-200 px-2 py-px focus-visible:outline-0"
+                class="peer rounded-lg border-2 border-green-200 px-4 py-2 focus-visible:outline-0"
                 type="text"
                 id="search-player"
-                v-model.lazy="playerName"
-                placeholder=" "
+                v-model="playerName"
+                placeholder=""
             />
             <label
-                class="absolute ms-2 -translate-y-[80%] bg-white text-sm font-bold tracking-widest transition-transform duration-300 peer-placeholder-shown:-translate-y-[0%] peer-focus:-translate-y-[80%]"
+                class="absolute ms-4 -translate-y-[80%] bg-white text-xl font-bold tracking-widest transition-transform duration-300 peer-placeholder-shown:-translate-y-[0%] peer-focus:-translate-y-[80%]"
                 for="search-player"
                 >搜尋姓名</label
             >
             <div class="relative"></div>
-        </form>
+    </form>
         <ul class="-mx-4 flex flex-wrap gap-y-4">
             <li
                 class="w-full px-4 md:w-6/12"

@@ -7,7 +7,7 @@ export default defineNuxtConfig({
         base: '/exhibition/',
     },
     colorMode: {
-        preference: 'system',
+        preference: 'dark',
         classPrefix: '',
         classSuffix: '',
     },
