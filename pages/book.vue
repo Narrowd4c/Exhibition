@@ -24,7 +24,7 @@
         <div
             :class="{
                 'flex-wrap gap-y-4 [&>*]:px-2': !toggle,
-                'transition-transform duration-300': toggle,
+                'transition-transform duration-1000': toggle,
             }"
             class="flex"
             :style="`transform: translateX(calc(${xWidth}%));`"
