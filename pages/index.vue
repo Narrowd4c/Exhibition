@@ -1,7 +1,8 @@
 <template>
     <main class="container py-10">
         <form
-            @submit.prevent class="relative mb-10 flex items-center gap-4 [&>*]:dark:bg-gray-800"
+            @submit.prevent
+            class="relative mb-10 flex items-center gap-4 [&>*]:dark:bg-gray-800"
         >
             <input
                 class="peer rounded-lg border-2 border-green-200 px-4 py-2 focus-visible:outline-0"
@@ -16,15 +17,15 @@
                 >搜尋姓名</label
             >
             <div class="relative"></div>
-    </form>
+        </form>
         <ul class="-mx-4 flex flex-wrap gap-y-4">
             <li
                 class="w-full px-4 md:w-6/12"
-                v-for="{ id, player, piece, sequence } in filterData"
-                :key="id + player"
+                v-for="{ date, player, piece, sequence } in filterData"
+                :key="date + player"
             >
                 <CardComp
-                    :id="id"
+                    :date="date"
                     :player="player"
                     :piece="piece"
                     :sequence="sequence"
@@ -42,7 +43,7 @@ const playerStore = useQuote1Store()
 const playerName = ref<string>('')
 
 interface Quote {
-    id?: number
+    date?: number
     sequence: number
     player: string
     piece: string
