@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import player1 from '../../assets/images/player/1.jpg'
 import player2 from '../../assets/images/player/2.jpg'
 import player3 from '../../assets/images/player/3.jpg'
 import player4 from '../../assets/images/player/4.jpg'
@@ -21,7 +22,8 @@ import player21 from '../../assets/images/player/21.jpg'
 import player22 from '../../assets/images/player/22.jpg'
 
 export const useQuoteImage1Store = defineStore('quoteImage1', () => {
-    const images = {
+    const images = [
+        player1,
         player2,
         player3,
         player4,
@@ -42,7 +44,7 @@ export const useQuoteImage1Store = defineStore('quoteImage1', () => {
         player20,
         player21,
         player22,
-    }
+    ]
 
     return { images }
 })
